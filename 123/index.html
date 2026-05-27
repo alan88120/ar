@@ -9,6 +9,9 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
+        <div class="ui-container">
+            <button class="ar-btn" onclick="triggerAR()">點我啟動動畫與聲音</button>
+        </div>
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
@@ -22,7 +25,10 @@
                 <a-asset-item
                     id="animated-asset"
                     src="assets/asset.glb"
-                ></a-asset-item>
+                        ></a-asset-item>
+                <audio id="my-audio"
+                       src="assets/12.mp3" 
+                        ></audio>
             </a-assets>
 
             <a-marker
