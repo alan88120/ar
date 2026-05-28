@@ -1,11 +1,10 @@
-<!doctype html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+        <script src="https://aframe.io"></script>
+        <script src="https://githack.com"></script>
+        <script src="https://githack.com"></script>
+        <script src="https://githack.com"></script>
+        <script src="https://githack.com"></script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -15,9 +14,15 @@
             renderer="logarithmicDepthBuffer: true; colorManagement: true;"
             arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
-            embeddedarjs="sourceType: webcam; sourceWidth:1280; sourceHeight:720; displayWidth: 1280; displayHeight: 720; debugPanelEnabled: false;">
+            embedded
             gesture-detector
         >
+            <!-- 💡 這裡就是加入的預設光源 -->
+            <!-- ambient 是環境光，用來均勻照亮全身 -->
+            
+            <!-- directional 是平行光（像太陽光），用來照出立體陰影與亮度 -->
+            
+
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
@@ -33,19 +38,11 @@
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
             >
-                <a-entity
-                    id="bowser-model"
-                    scale="0.2358353079902518 0.2358353079902518 0.2358353079902518"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
+                
             </a-marker>
 
-            <a-entity camera></a-entity>
+            
         </a-scene>
     </body>
 </html>
