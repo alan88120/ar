@@ -17,7 +17,19 @@
             id="scene"
             embedded
             gesture-detector
-        >
+             
+			<a-light
+              type="ambient"
+              color="#ffffff"
+              intensity="1.5">
+             </a-light>
+			   
+			<a-light
+                type="directional"
+                position="1 1 1"
+                intensity="1.2">
+             </a-light>
+			   
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
