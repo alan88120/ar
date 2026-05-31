@@ -9,6 +9,20 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
+        <a-assets>
+                <a-asset-item
+                    id="animated-asset"
+                    src="assets/asset.glb"
+                ></a-asset-item>
+         </a-assets>
+         <audio id="myAudio">
+                <source src="assets/1.mp3" type="audio/mpeg">
+        </audio> 
+
+              <button onclick="document.getElementById('myAudio').play()" 
+              style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 999; padding: 10px 20px; font-size: 18px;">
+              雞叫</button>
+        
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
@@ -18,19 +32,7 @@
             embeddedarjs="sourceType: webcam; sourceWidth:1280; sourceHeight:720; displayWidth: 1280; displayHeight: 720; debugPanelEnabled: false;">
             gesture-detector
         >
-            <a-assets>
-                <a-asset-item
-                    id="animated-asset"
-                    src="assets/asset.glb"
-                ></a-asset-item>
-            </a-assets>
-              <audio id="myAudio">
-                <source src="assets/1.mp3" type="audio/mpeg">
-              </audio> 
-
-              <button onclick="document.getElementById('myAudio').play()" 
-              style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 999; padding: 10px 20px; font-size: 18px;">
-              雞叫</button>
+           
 
             <a-marker
                 id="animated-marker"
